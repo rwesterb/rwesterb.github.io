@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<!-- Website Template by freewebsitetemplates.com -->
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title>Skattjakt</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+	</head>
+	<body>
+		<div id="background">
+			<div id="page">
+				<div id="sidebar">
+					<ul class="navigation">
+						<li id="link1" class="selected">
+							<a href="index.html">Skatt<br/> jakt</a>
+						</li>
+
+					</ul>
+
+				</div>
+				<div id="content">
+					<span></span>
+					<div class="header">
+						<img id="huntpicture" src="images/hunt/pic1.JPEG" width="800" height="600" alt="">
+					</div>
+					<div class="body">
+						<div class="section">
+							<div class="article">
+								<h4>Instruktioner</h4>
+								<ol>
+									<li><h4>Identifiera var bilden är tagen</h4></li>
+									<li><h4>Hitta en kod vid platsen</h4></li>
+									<li><h4>Tryck på 'ANGE KOD'</h4></li>
+								</ol>
+							</div>
+							<div class="article">
+								<button type="button" id="codebutton" class="codebutton">ANGE KOD</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			let navigation = {
+				'paths' : [
+					{ 'code' : "KLMN3", 'picture' : "images/hunt/pic2.JPEG"},
+					{ 'code' : "HTSD4", 'picture' : "images/hunt/pic3.JPEG"},
+					{ 'code' : "FRTF2", 'picture' : "images/hunt/pic4.JPEG"},
+					{ 'code' : "VGTR7", 'picture' : "images/hunt/pic5.JPEG"},
+					{ 'code' : "GYFE4", 'picture' : "images/hunt/pic6.JPEG"},
+					{ 'code' : "BHBS5", 'picture' : "images/hunt/pic7.JPEG"},
+					{ 'code' : "MLKS1", 'picture' : "images/hunt/pic8.JPEG"},
+					{ 'code' : "POIY9", 'picture' : "images/hunt/pic9.JPEG"},
+				]
+			}
+
+			const button = document.getElementById("codebutton");
+
+			button.onclick = function() {
+				const code = prompt("Skriv in koden:");
+				const path = navigation.paths.find(p => p.code === code);
+				if(path) {
+					const pictureElement = document.getElementById("huntpicture");
+					pictureElement.src = path.picture;
+					return;
+				}
+				alert("Fel kod, försök igen!");
+			};
+
+
+		</script>
+	</body>
+</html>
