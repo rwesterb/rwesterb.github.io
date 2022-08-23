@@ -5,41 +5,24 @@
 		<meta charset="UTF-8">
 		<title>Skattjakt</title>
 		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="css/devices.min.css" type="text/css">
 	</head>
 	<body>
-		<div id="background">
-			<div id="page">
-				<div id="sidebar">
-					<ul class="navigation">
-						<li id="link1" class="selected">
-							<a href="index.html">Skatt<br/> jakt</a>
-						</li>
-
-					</ul>
-
+		<div class="marvel-device macbook">
+			<div class="top-bar"></div>
+			<div class="camera"></div>
+			<div class="screen">
+				<button type="button" id="codebutton" class="codebutton">ANGE KOD</button>
+				<div id="divInstructions">
+					<ol>
+						<li>Identifiera var bilden är tagen</li>
+						<li>Hitta en kod vid platsen</li>
+						<li>Tryck på 'ANGE KOD'</li>
+					</ol>
 				</div>
-				<div id="content">
-					<span></span>
-					<div class="header">
-						<img id="huntpicture" src="images/hunt/pic1.JPEG" width="800" height="600" alt="">
-					</div>
-					<div class="body">
-						<div class="section">
-							<div class="article">
-								<h4>Instruktioner</h4>
-								<ol>
-									<li><h4>Identifiera var bilden är tagen</h4></li>
-									<li><h4>Hitta en kod vid platsen</h4></li>
-									<li><h4>Tryck på 'ANGE KOD'</h4></li>
-								</ol>
-							</div>
-							<div class="article">
-								<button type="button" id="codebutton" class="codebutton">ANGE KOD</button>
-							</div>
-						</div>
-					</div>
-				</div>
+				<img id="huntpicture" src="images/hunt/pic1.JPEG" width="960" height="600" alt="">
 			</div>
+			<div class="bottom-bar"></div>
 		</div>
 		<script>
 			let navigation = {
